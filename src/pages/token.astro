@@ -19,6 +19,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 <script>
 
 async function checkCurrentAuth() {
+  localStorage.setItem('pass', 'abc123')
   const password = localStorage.getItem('pass')
   const response = await fetch('/api/auth', {
     method: 'POST',
