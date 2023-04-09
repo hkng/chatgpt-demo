@@ -17,9 +17,9 @@ import 'highlight.js/styles/atom-one-dark.css'
 </Layout>
 
 <script>
-
 async function checkCurrentAuth() {
-  localStorage.setItem('pass', 'abc123')
+  if (!Astro.cookies.has('HHLogin'))
+    window.location.href = '/password'
   const password = localStorage.getItem('pass')
   const response = await fetch('/api/auth', {
     method: 'POST',
