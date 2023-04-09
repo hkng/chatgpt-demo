@@ -7,9 +7,6 @@ import '../message.css'
 import 'katex/dist/katex.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
 
-if (!Astro.cookies.has("HHLogin")) {
-  return Astro.redirect('/password');
-}
 ---
 
 <Layout title="ChatGPT API Demo">
